@@ -1,35 +1,16 @@
-// HUM-HashEquals/Person.java
+// KFK-WriteOb/Person.java
  
-public class Person {
-
+public class Person implements java.io.Serializable {
     private String name;
-    private String idNumber;
+    private int    yearOfBirth;
 
-    public Person(String name, String idNumber) {
-        this.name     = name;
-        this.idNumber = idNumber;
+    Person(String n, int y) {
+        name        = n;
+        yearOfBirth = y;
     }
-
-    /*
-    @Override
-    public boolean equals(Object other) {
-        if (other == null ||
-            getClass() != other.getClass()) return false;
-        Person p = (Person)other;
-        return idNumber.equals(p.idNumber) &&
-                   name.equals(p.name);
-    }
-    /**/
-
-    /*
-    @Override
-    public int hashCode() {
-        return 17*name.hashCode() + idNumber.hashCode();
-    }
-    /**/
 
     @Override
     public String toString() {
-        return name + "(" + idNumber + ")";
+        return name + " (" + yearOfBirth + ")";
     }
 }
