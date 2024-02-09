@@ -1,7 +1,5 @@
-// EQA-AbstractFigs/Main.java
-// taha burak sahin pjatk
-
-import java.util.Arrays;
+// EPZ-AbsFig/Main.java
+ 
 import java.util.Locale;
 
 public class Main {
@@ -16,10 +14,5 @@ public class Main {
 
         Figure fig = Figure.getFigMaxArea(figs);
         System.out.println("\nLargest area: \n" + fig);
-
-        Arrays.sort(figs);
-        System.out.println("\nSorted by circumference:");
-        for (Figure f : figs)
-            System.out.println(f);
     }
 }

@@ -1,6 +1,5 @@
-// EQA-AbstractFigs/Rectangle.java
-// taha burak sahin pjatk
-
+// EPZ-AbsFig/Rectangle.java
+ 
 public class Rectangle extends Figure {
     private double a, b;
 
@@ -13,6 +12,7 @@ public class Rectangle extends Figure {
     public double getArea() {
         return a*b;
     }
+
     @Override
     public double getPerimeter() {
         return 2*(a+b);

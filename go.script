@@ -1,0 +1,11 @@
+echo Compiling the processor
+javac myprocessor/MyProcessor.java
+
+echo compiling PersonSkel and processing annotations
+javac -XprintRounds -implicit:class      \
+      -processor myprocessor.MyProcessor \
+                  myapplication/*Skel.java
+
+echo Now compiling and running example program
+javac myapplication/AnnoTest.java
+java myapplication.AnnoTest

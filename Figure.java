@@ -1,7 +1,6 @@
-// EQA-AbstractFigs/Figure.java
-// taha burak sahin pjatk
-
-abstract class Figure implements Comparable<Figure> {
+// EPZ-AbsFig/Figure.java
+ 
+abstract class Figure {
 
     abstract public double getArea();
     abstract public double getPerimeter();
@@ -25,13 +24,5 @@ abstract class Figure implements Comparable<Figure> {
               + String.format("%6.3f",getArea())
               + "; perimeter: "
               + String.format("%6.3f",getPerimeter());
-    }
-
-    @Override
-    public int compareTo(Figure f) {
-        double diff = getPerimeter() - f.getPerimeter();
-        if      (diff < 0) return -1;
-        else if (diff > 0) return +1;
-        else               return 0;
     }
 }

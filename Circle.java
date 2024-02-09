@@ -1,6 +1,5 @@
-// EQA-AbstractFigs/Circle.java
-// taha burak sahin pjatk
-
+// EPZ-AbsFig/Circle.java
+ 
 public class Circle extends Figure {
     private double r;
 
