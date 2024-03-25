@@ -1,18 +1,20 @@
-// EPZ-AbsFig/Main.java
- 
-import java.util.Locale;
-
 public class Main {
+
     public static void main(String[] args) {
-          // to have decimal point instead of a comma...
-        Locale.setDefault(Locale.US);
 
-        Figure[] figs = {
-            new Circle(2),      new Rectangle(9,1),
-            new Rectangle(4,3), new Circle(4)
-        };
+        int[] arr = new int[100];
 
-        Figure fig = Figure.getFigMaxArea(figs);
-        System.out.println("\nLargest area: \n" + fig);
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = (int)(Math.random()*100) + 1;
+
+        print(arr, val -> val % 2 == 0);
+
     }
+
+    public static void print(int[] arr, Filtrator filtrator){
+        for (int i : arr)
+            if (filtrator.filter(i))
+                System.out.println(i);
+    }
+
 }
